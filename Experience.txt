@@ -1,0 +1,27 @@
+Research Assistant 
+Saint Louis University 				January 2023 –May 2024
+– Developed and managed a drone simulation in Unreal Engine for detailed 3D scene reconstruction, featuring a custom four-camera system to create dynamic homography and capture extensive area images, enhancing the fidelity and accuracy of environmental models.
+– Implemented advanced remote annotation capabilities on UAV video streams to share GPS using Unity, significantly boosting situational awareness and reducing response times by 60%.
+– Conducted research study with 32 participants to validate improvements in situational awareness and communication, proving the efficacy of AR in critical operations.
+– Configured a cloud-based MQTT server to stream Drone data to Hololens in real-time, securing1-second latency for augmented reality applications.
+
+
+
+
+Associate Data Engineer | Egen (SpringML) July 2021 – June 2022
+
+• Refined web application utilizing Angular and Python. Enhanced user interface and cut load times by 5 seconds through implementation of multi-threading techniques.
+• Designed Firebase schemas that optimize data retrieval and storage, enabling efficient data management and fast response times.
+• Developed advanced analytical solutions using custom functions and stored procedures in BigQuery, reducing data processing times by 30% and enabling real-time data visualization through interactive dashboards.
+• Implemented continuous integration and continuous deployment (CI/CD) best practices tostreamline the application deployment process on Google App Engine.
+• Integrated Twilio Video API into the application to facilitate real-time video and audio recording, significantly enhancing interactive capabilities and user experience.
+• Assembled an automated pipeline using Google Cloud Functions triggered by Cloud Storage events, alongside Speech-to-Text, enabling efficient data handling and instant transcript generation.
+• Leveraged Python’s email modules to build an automated email notification system for timely user notifications, alerts, and media libraries to merge audio/video files for efficient multimedia content management.
+• Worked on dataflow integration pipelines to interact between various on-premise systems and bi-directional communication between on-premise systems and GCP based Manhattan Active Omni.
+• Improved deployment efficiency by 75% through automation of GCP services using Terraform.
+
+
+Data Engineer intern | Egen (SpringML) Feb 2021 – June 2021
+– Leveraged OpenCV to streamline the extraction and preprocessing of video frames, successfully preparing 600 images to enhance the training of a highly accurate object detection model.
+– Integrated Google Cloud Vision API to effectively extract text from images and trained a custom object detection model, achieving a 70% reduction in API calls and significantly lowering costs.
+– Implemented user authentication using Firebase enabling secure login and registration functionalities.

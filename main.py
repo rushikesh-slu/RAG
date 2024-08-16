@@ -2,7 +2,8 @@ import os
 import gradio as gr
 import PyPDF2
 import docx
-from embeddings import load_and_split_document,query_rag
+# from embeddings import load_and_split_document,query_rag
+from embeddings import query_bq
 import threading
 
 multipleFilecontent = ''
@@ -55,8 +56,8 @@ def get_chat_response(chat: ChatSession, prompt: str) -> str:
         text_response.append(chunk.text)
     return "".join(text_response)
 
-def generateEmbeddings(file_path):
-    load_and_split_document(file_path)
+# def generateEmbeddings(file_path):
+#     load_and_split_document(file_path)
 
 
 def process_message(prompt):
@@ -97,11 +98,11 @@ def respond(history, text_input,files,rag_check):
                     # return history, gr.MultimodalTextbox(value=None, interactive=True)
                     return history, gr.update(value=""), gr.update(value=None)
                 else:
-                   background_thread = threading.Thread(
-                    target=generateEmbeddings,
-                    args=(filepath,),  # Pass arguments as a tuple
-                    daemon=True)
-                   background_thread.start()
+                #    background_thread = threading.Thread(
+                #     target=generateEmbeddings,
+                #     args=(filepath,),  # Pass arguments as a tuple
+                #     daemon=True)
+                #    background_thread.start()
                    multipleFilecontent += f"Filename : {filepath}, File content: {file_content}\n\n"
                     
                     
@@ -121,7 +122,7 @@ def respond(history, text_input,files,rag_check):
                 prompt = f"Based on the following content, {multipleFilecontent},\n answer {message['text']}"
                 file_content = ''
             if not rag_check:
-                context = query_rag(message['text'])
+                context = query_bq(message['text'])
                 if multipleFilecontent:
                     prompt = f"Based on the following content, {multipleFilecontent} and {context},\n answer {message['text']}"
                 else:
